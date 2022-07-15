@@ -1,0 +1,61 @@
+** Chatbot:
+  - Front end: React
+  - Back end: C#, .NET
+** For Chabot automation 
+ - Check API testing ?
+
+** Important action items:
+- Check if the test suite in NUnit is good enough?
+- Extent Report for multi test classes.
+- REad data from file
+
+** For Framwork development- Explore:
+1)* Test Report: -->  Extented Report?  ===> https://medium.com/@nehamittalr2500/selenium-with-nunit-generic-extent-report-for-all-classes-dc24b9d39736
+   + https://www.youtube.com/watch?v=d6lSJHqc-zY
+   + With BDD: https://www.youtube.com/watch?v=d6lSJHqc-zY
+   + with Specflow and Selenium C# Series: https://www.youtube.com/watch?v=C1RiUYkSKGw&list=PL6tu16kXT9Pq9Vbv3COnghYSebjQLN7MR
+   
+2)* Test framework: NUnit 
+  + Test Suite
+	+ How to organinize to run a set of TCs quickly
+3) Log4j for logging ?
+4) Git Lab or Git Hub for Repository
+5)* BDD with Specflow: https://www.youtube.com/watch?v=tfq9FlkyaUM&list=PL6tu16kXT9Pp3wrsaYyNRnK1QkvVv6qdI&index=1
+6) Parallel execution
+7) Executing in CI/CD
+
+6) Others:
+ - Custome controls
+ - Custom wrappers for Logging, assertions
+ - Reporting
+ - Parallel execution
+ - Selenium grid support
+
+
+
+** Others programing to explore:
+1a) NUnit assert: https://www.lambdatest.com/blog/asserts-in-nunit/
+1b) NUnit Attributes: 
+https://docs.nunit.org/2.5/suite.html
+https://docs.nunit.org/articles/nunit/writing-tests/attributes/testfixture.html?q=testfixture
+
+2) Handling exceptions 
+   + Sometimes, the expected result is to actually have an exception thrown. In this case, you don’t want your code to stop executing or to throw the exception. Instead, you want to catch the exception and perform a certain action when the exception is thrown.
+   + Driver Handling
+
+3) C# OOP: https://www.geeksforgeeks.org/c-sharp-class-and-object/?ref=lbp  ; https://dotnet.microsoft.com/en-us/learn/csharp
+
+
+--- Handling exceptions sample:
+public bool IsElementFound()
+{
+        try
+        {
+                driver.FindElement(By.Id("LogoutButton"));
+                return true;
+        }
+        catch (NoSuchElementException e)
+        {
+                return false;
+        }
+}
