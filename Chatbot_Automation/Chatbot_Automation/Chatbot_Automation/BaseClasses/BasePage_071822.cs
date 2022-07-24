@@ -9,21 +9,22 @@ using Selenium_NUnit_ChatbotTest.BaseClasses;
 
 namespace Selenium_NUnit_ChatbotTest.BaseClasses
 {
-    public class BasePage
+    public class BasePage_071822
     {
 
         //private IWebDriver driver;
         //protected IWebDriver driver;  //071422 Grant changed
-        public IWebDriver driver;       //071822 updated
+        public IWebDriver driver { get; set; }      //071822 updated
 
         public BasePage_LeftPane LeftPane;
         public BasePage_HeaderPane HeaderPane;
         //public IWebElement RightPane;
         public BasePage_RightPane RightPane;
 
-        public BasePage(IWebDriver webDriver)
+        //public BasePage_071822(IWebDriver webDriver)
+        public BasePage_071822()
         {
-            driver = webDriver;
+            //driver = webDriver;
             initLeftPane();
             initRightPane();
             initRightPane(); //added 7/12/22

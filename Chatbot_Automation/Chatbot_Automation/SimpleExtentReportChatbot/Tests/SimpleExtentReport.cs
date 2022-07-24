@@ -58,8 +58,8 @@ namespace SimpleExtentReportChatbot.Tests
             /* Initial extent report */
             //test = extent.CreateTest(TestContext.CurrentContext.Test.Name);
 
-            String email = "le.nguyen.us.123@gmail.com";
-            String pass = "Chat!235";
+            String email = "le.nguyen.test1@gmail.com";
+            String pass = "Chat!236";
 
             //Create test report for this Test
             //_report = report;

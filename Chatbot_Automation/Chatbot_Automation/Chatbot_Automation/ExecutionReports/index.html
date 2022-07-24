@@ -52,7 +52,7 @@
           </li>
             <li class="m-r-10">
                 <a href="#">
-                    <span class="badge badge-primary">7/14/2022 4:25:27 PM</span>
+                    <span class="badge badge-primary">7/24/2022 12:29:15 PM</span>
                 </a>
             </li>
         </ul>
@@ -107,7 +107,7 @@
 											<i class="fa fa-exclamation-circle"></i>
 										</a>
 										<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a status="pass" class="dropdown-item" href="#"><span>Pass</span><span class="status success pull-right"></span></a>																																																																		<div class="dropdown-divider"></div>
+											<a status="fail" class="dropdown-item" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>																																																							<div class="dropdown-divider"></div>
 											<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 										</ul>
 									</li>
@@ -115,25 +115,25 @@
                             </div>
                             <div class="test-list-wrapper scrollable">
                                 <ul class="test-list-item">
-										<li class="test-item" status="pass" author="" device="" tag=""> 
-											<div class="status-avatar pass-bg">
-												<i class="fa fa-check text-white"></i>
+										<li class="test-item" status="fail" author="" device="" tag=""> 
+											<div class="status-avatar fail-bg">
+												<i class="fa fa-times text-white"></i>
 											</div>
 											<div class="open-test">
 												<div class="test-detail"> 
 													<p class="name">CreateQuestionWithStaticAnswer</p> 
-													<p class="duration text-sm">0h:0m:4s+637ms</p> 
-													<span class="datetime">16:25:27 PM</span>
+													<p class="duration text-sm">0h:0m:8s+552ms</p> 
+													<span class="datetime">12:29:19 PM</span>
 												</div>
 											</div>
 											<div class="test-contents d-none">
 												<div class="detail-head">
 													<div class="p-v-10 d-inline-block">	
 														<div class="info">
-															<h5 class="test-status text-pass">CreateQuestionWithStaticAnswer</h5>
-															<span class='badge badge-success'>7/14/2022 4:25:27 PM</span>
-															<span class='badge badge-danger'>7/14/2022 4:25:31 PM</span>
-															<span class='badge badge-default'>0h:0m:4s+637ms</span>
+															<h5 class="test-status text-fail">CreateQuestionWithStaticAnswer</h5>
+															<span class='badge badge-success'>7/24/2022 12:29:19 PM</span>
+															<span class='badge badge-danger'>7/24/2022 12:29:28 PM</span>
+															<span class='badge badge-default'>0h:0m:8s+552ms</span>
 														</div>
 																											</div>
 												</div>
@@ -148,27 +148,100 @@
 	<tbody>
 			<tr class="event-row">
 				<td><i class="fa fa-info text-info"></i></td>
-				<td>16:25:28</td>
+				<td>12:29:20</td>
 				<td>
 Signed In ChatbotAdmin									</td>
 			</tr>
 			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>12:29:28</td>
+				<td>
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 7 seconds
+ ---> OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"div[class='nav-menu-wrapper']"}
+  (Session info: chrome=103.0.5060.134)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at Selenium_NUnit_ChatbotTest.Ultilities.WaitFunctions.<>c__DisplayClass2_0.<WaitUntilElementIsDisplayed>b__0(IWebDriver d) in C:\AUTOMATION TESTING\Chatbot_Selenium_C#\Chatbot_Automation\Chatbot_Automation\Chatbot_Automation\Ultilities\WaitFunctions.cs:line 36
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at Selenium_NUnit_ChatbotTest.Ultilities.WaitFunctions.WaitUntilElementIsDisplayed(IWebDriver driver, By locator) in C:\AUTOMATION TESTING\Chatbot_Selenium_C#\Chatbot_Automation\Chatbot_Automation\Chatbot_Automation\Ultilities\WaitFunctions.cs:line 42
+   at Selenium_NUnit_ChatbotTest.BaseClasses.BasePage.initLeftPane() in C:\AUTOMATION TESTING\Chatbot_Selenium_C#\Chatbot_Automation\Chatbot_Automation\Chatbot_Automation\BaseClasses\BasePage.cs:line 36
+   at Selenium_NUnit_ChatbotTest.BaseClasses.BasePage..ctor(IWebDriver webDriver) in C:\AUTOMATION TESTING\Chatbot_Selenium_C#\Chatbot_Automation\Chatbot_Automation\Chatbot_Automation\BaseClasses\BasePage.cs:line 27
+   at Selenium_NUnit_ChatbotTest.Tests.CreateQuestionTests.CreateQuestionWithStaticAnswer() in C:\AUTOMATION TESTING\Chatbot_Selenium_C#\Chatbot_Automation\Chatbot_Automation\Chatbot_Automation\Tests\TestScripts\CreateQuestionTests.cs:line 42									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="fail" author="" device="" tag=""> 
+											<div class="status-avatar fail-bg">
+												<i class="fa fa-times text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CreateQuestionWithStaticAnswer_Fail</p> 
+													<p class="duration text-sm">0h:0m:8s+948ms</p> 
+													<span class="datetime">12:29:31 PM</span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-fail">CreateQuestionWithStaticAnswer_Fail</h5>
+															<span class='badge badge-success'>7/24/2022 12:29:31 PM</span>
+															<span class='badge badge-danger'>7/24/2022 12:29:39 PM</span>
+															<span class='badge badge-default'>0h:0m:8s+948ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
 				<td><i class="fa fa-info text-info"></i></td>
-				<td>16:25:31</td>
+				<td>12:29:32</td>
 				<td>
-Opened ManageQuestions page									</td>
+Signed In ChatbotAdmin									</td>
 			</tr>
 			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>16:25:31</td>
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>12:29:39</td>
 				<td>
-Opened Mange Question page successfully									</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>16:25:31</td>
-				<td>
-Opened Create Question page successfully									</td>
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 7 seconds
+ ---> OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"div[class='nav-menu-wrapper']"}
+  (Session info: chrome=103.0.5060.134)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at Selenium_NUnit_ChatbotTest.Ultilities.WaitFunctions.<>c__DisplayClass2_0.<WaitUntilElementIsDisplayed>b__0(IWebDriver d) in C:\AUTOMATION TESTING\Chatbot_Selenium_C#\Chatbot_Automation\Chatbot_Automation\Chatbot_Automation\Ultilities\WaitFunctions.cs:line 36
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at Selenium_NUnit_ChatbotTest.Ultilities.WaitFunctions.WaitUntilElementIsDisplayed(IWebDriver driver, By locator) in C:\AUTOMATION TESTING\Chatbot_Selenium_C#\Chatbot_Automation\Chatbot_Automation\Chatbot_Automation\Ultilities\WaitFunctions.cs:line 42
+   at Selenium_NUnit_ChatbotTest.BaseClasses.BasePage.initLeftPane() in C:\AUTOMATION TESTING\Chatbot_Selenium_C#\Chatbot_Automation\Chatbot_Automation\Chatbot_Automation\BaseClasses\BasePage.cs:line 36
+   at Selenium_NUnit_ChatbotTest.BaseClasses.BasePage..ctor(IWebDriver webDriver) in C:\AUTOMATION TESTING\Chatbot_Selenium_C#\Chatbot_Automation\Chatbot_Automation\Chatbot_Automation\BaseClasses\BasePage.cs:line 27
+   at Selenium_NUnit_ChatbotTest.Tests.OpenCreateQuestionTests_Fail.CreateQuestionWithStaticAnswer_Fail() in C:\AUTOMATION TESTING\Chatbot_Selenium_C#\Chatbot_Automation\Chatbot_Automation\Chatbot_Automation\Tests\TestScripts\OpenCreateQuestionTests_Fail.cs:line 44									</td>
 			</tr>
 	</tbody>
 </table>

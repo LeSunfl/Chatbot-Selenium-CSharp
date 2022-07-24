@@ -10,6 +10,8 @@ namespace Selenium_NUnit_ChatbotTest.Ultilities
 {
     public class WaitFunctions
     {
+        private static double waitSeconds = 7;
+
         public static void WaitUntilElementIsEnabled(IWebDriver driver, By locator)
         {
 
@@ -21,7 +23,8 @@ namespace Selenium_NUnit_ChatbotTest.Ultilities
                 return e.Displayed && e.Enabled;
             };
             //wait until the condition is true
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(waitSeconds));
             wait.Until(searchEelementEnabled);
         }
 
@@ -35,7 +38,7 @@ namespace Selenium_NUnit_ChatbotTest.Ultilities
                 return e.Displayed;
             };
             //wait until the condition is true
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(waitSeconds));
             wait.Until(searchElementDisplayed);
         }
 

@@ -11,7 +11,7 @@ using AventStack.ExtentReports.Reporter;
 using System.IO;
 using Selenium_NUnit_ChatbotTest.Ultilities;
 using Selenium_NUnit_ChatbotTest.BaseClasses;
-using Selenium_NUnit_ChatbotTest.Tests.Common;
+using Selenium_NUnit_ChatbotTest.Tests; //.Common;
 using NUnit.Framework.Interfaces;
 
 

@@ -14,7 +14,7 @@ namespace Selenium_NUnit_ChatbotTest.BaseClasses
     {
        
         By locatorSignIn = By.CssSelector("button[id='next']");
-        By locatorEmail = By.CssSelector("input[id='logonIdentifier']");
+        By locatorEmail = By.CssSelector("input[id='email']"); //By.CssSelector("input[id='logonIdentifier']"); //7/24/22: id was changed
         By locatorPassword = By.CssSelector("input[id='password']");
 
         private IWebDriver driver { get; }
@@ -37,9 +37,13 @@ namespace Selenium_NUnit_ChatbotTest.BaseClasses
             if (txtPassword.Enabled)
                txtPassword.SendKeys(password);
         }
-        
-        
-      
+
+        public void setEmail(string email)
+        {
+            if (txtEmail.Enabled)
+                txtEmail.SendKeys(email);
+        }
+
         /*
         public IWebElement buttonLogin2()
         {
@@ -54,8 +58,8 @@ namespace Selenium_NUnit_ChatbotTest.BaseClasses
             Assert.That(buttonSignIn.Displayed, Is.True, "FAIL - Sign In page is NOT displayed.");
             Console.WriteLine("Sign In page is displayed.");
           
-            txtEmail.SendKeys(email);
-            //inputPassword.SendKeys(password);
+            //txtEmail.SendKeys(email);
+            setEmail(email);
             setPassword(password);
 
             buttonSignIn.Click();

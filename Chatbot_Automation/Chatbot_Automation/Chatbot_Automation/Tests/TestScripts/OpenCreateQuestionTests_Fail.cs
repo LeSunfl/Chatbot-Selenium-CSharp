@@ -8,26 +8,28 @@ using OpenQA.Selenium;
 using Selenium_NUnit_ChatbotTest.Ultilities;
 using AventStack.ExtentReports;
 using Selenium_NUnit_ChatbotTest.BaseClasses;
+using Selenium_NUnit_ChatbotTest.BaseClasses;
 using Selenium_NUnit_ChatbotTest.PageObjects;
-
 
 namespace Selenium_NUnit_ChatbotTest.Tests
 {
+
     [TestFixture]
     //class CreateQuestionTests__ERFail : BaseTests_ERFail
-    class CreateQuestionTests : BaseTests
+    class OpenCreateQuestionTests_Fail : BaseTests
     {
+
         #region TestParamaters
-        String email = "le.nguyen@jenzabar.com";
-        String pass = "Chat!236";
+        String email = "le.nguyen@jenzabar.com"; //"le.nguyen.us.123@gmail.com";
+        String pass = "Chat!236"; //"Chat!235";
         BasePage Page;
-        string NewQuestionName = "New Automation Question";  //need to make it dynamic: Question<date><time>
+        string NewQuestionName = "LeTestNewQuestion";  //need to make it dynamic: Question<date><time>
         #endregion
 
         [Author("LeNguyen")]
         [Description("Create Question Test")]
         [Test]
-        public void CreateQuestionWithStaticAnswer()
+        public void CreateQuestionWithStaticAnswer_Fail()
         {
             try
             {
@@ -41,25 +43,24 @@ namespace Selenium_NUnit_ChatbotTest.Tests
                 //**2. Open ManageQuestionsPage 
                 Page = new BasePage(driver);
                 Page.LeftPane.OpenManageQuestionsPage();
-
                 Assert.That(Page.RightPane.GetPageTitle(), Is.EqualTo("Manage Questions"));
                 test.Log(Status.Info, "Opened ManageQuestions page");
-                //Console.WriteLine("Opened Manage Questions page.");
+                Console.WriteLine("Opened Manage Questions page.");
 
                 //**3. Open Create QuestionsPage 
                 ManageQuestionsPage pageManageQ = new ManageQuestionsPage(driver);
                 pageManageQ.OpenCreateQuestionPage();
                 try
                 {
-                    Assert.That(Page.RightPane.GetPageTitle(), Is.EqualTo("Create a New Question"));
+                    Assert.That(Page.RightPane.GetPageTitle(), Is.EqualTo("Create a New QQQ"));
                 }
                 catch (Exception ex) //Note: if this verification is failed, the script still continue executing
                 {
-                    test.Fail("Page title is not correct. Expected: 'Create a New QQQ - Actual : " + Page.RightPane.GetPageTitle());
+                    test.Fail("Page title is not correct. Expected: 'Create a New QQQ' - Actual : " + Page.RightPane.GetPageTitle());
                 }
-
+                
                 test.Log(Status.Pass, "Opened Create Question page successfully");
-                //Console.WriteLine("Opened Create Question page successfully");
+                Console.WriteLine("Opened Create Question page successfully");
 
                 //** 4. Enter data in the Create Question page
                 CreateQuestionPage pageNewQ = new CreateQuestionPage(driver);
@@ -67,6 +68,9 @@ namespace Selenium_NUnit_ChatbotTest.Tests
                 pageNewQ.AddPhrasingButton.Click();
                 //pageNewQ.AddAlternatevePhrasing("Phrase Test 01");
 
+                //Added 07/15/22
+                test.Log(Status.Info, "Continued after the previous verification is failed.");
+                Console.WriteLine("Filled in question name"); ;
             }
             catch (Exception ex)
             {   //Console.WriteLine(ex.Message);

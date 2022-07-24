@@ -5,6 +5,7 @@ using AventStack.ExtentReports.Reporter;
 using NUnit.Framework;
 
 using OpenQA.Selenium;
+using SimpleExtentReportChatbot.BaseClasses;
 using SimpleExtentReportChatbot.Ultilities;
 using System;
 
@@ -23,11 +24,12 @@ namespace SeleniumNunitExtentReport.Test
 {
 
     [SetUpFixture]
-    class SetUpClass
+    //class SetUpClass
+    class SetUpClass : BaseTests  //updated 7/20/22
 
     {
 
-        public static AventStack.ExtentReports.ExtentReports extent;
+        //public static AventStack.ExtentReports.ExtentReports extent;
 
       
         [OneTimeSetUp]

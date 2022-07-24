@@ -14,9 +14,9 @@ using Selenium_NUnit_ChatbotTest.PageObjects;
 namespace Selenium_NUnit_ChatbotTest.Tests
 {
 
-    [TestFixture]
+    //[TestFixture]
     //class CreateQuestionTests__ERFail : BaseTests_ERFail
-    class CreateQuestionTests_OLD : BaseTests
+    class bk_CreateQuestionTests_OLD : BaseTests
     {
 
         #region TestParamaters
@@ -28,7 +28,7 @@ namespace Selenium_NUnit_ChatbotTest.Tests
 
         [Author("LeNguyen")]
         [Description("Create Question Test")]
-        [Test]
+        //[Test]
         public void CreateQuestionWithStaticAnswer()
         {
             try

@@ -22,42 +22,21 @@ namespace SimpleExtentReportChatbot.BaseClasses
         public AventStack.ExtentReports.ExtentReports extent;
         public AventStack.ExtentReports.ExtentTest test = null;
 
+
         [OneTimeSetUp]
         public void OpenChatbotAdmin()
         {
             Console.WriteLine("Opening ChatbotAdmin page");
-            //driver.Url = URL;
-
-            //String URL_QA2 = "https://qa2-dev-kysvesggewzmo-chatbotadmin.azurewebsites.net/chat-bot-admin.html#/login";
-            //driver.Url = URL_QA2;
-
-            String URL_QA3 = "https://qa3-dev-m3brdg5s4w76i-chatbotadmin.azurewebsites.net/chat-bot-admin.html#/login";
-            driver.Url = URL_QA3;
-
             driver.Manage().Window.Maximize();
+
+            String URL_QA2 = "https://qa2-dev-kysvesggewzmo-chatbotadmin.azurewebsites.net/chat-bot-admin.html#/login";
+            driver.Url = URL_QA2;
+
+            //String URL_QA3 = "https://qa3-dev-m3brdg5s4w76i-chatbotadmin.azurewebsites.net/chat-bot-admin.html#/login";
+            //driver.Url = URL_QA3;
         }
         // Group (1)  IT WORKED BUT 
          
-        [OneTimeSetUp]
-        public void ExtentReportStart()
-        {
-            string filePath = FileFolderUltilities.GetFolderPath("ExecutionReports\\index.html");
-
-            extent = new AventStack.ExtentReports.ExtentReports();
-            var htmlReporter = new ExtentHtmlReporter(@filePath);
-            extent.AttachReporter(htmlReporter);
-            extent.AddSystemInfo("Tester: ", "Le Nguyen");
-
-            //htmlReporter.config().setReportName("Web Automation Results");
-            //htmlReporter.config().setDocumentTitle("Test Results");
-        }
-
-        [OneTimeTearDown]  //[TearDown]
-        public void ExtentReportClose()
-        {
-            extent.Flush();
-        }
-
         
         [SetUp]
         public void CreateTest()
@@ -71,7 +50,7 @@ namespace SimpleExtentReportChatbot.BaseClasses
         public void CloseBrowser()
         {
             //Console.WriteLine("Closing browser");
-            driver.Close();
+            //driver.Close();
             //driver.Quit();
         }
 
